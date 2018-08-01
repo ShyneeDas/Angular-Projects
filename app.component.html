@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Month</title>
+ </head>
+ <body>
+   <div style="text-align: center">
+     <h1>
+       {{title}}
+     </h1>
+   </div>
+   <div>
+     <select (change)="changemonths($event)">
+       <option *ngFor="let i of months">{{i}}</option>
+     </select>
+   </div>
+   <br />
+   <div>
+     <span *ngIf="isavailable ;else condition1">Condition valid</span>
+     <ng-template #condition1>template 1</ng-template>
+   </div>
+   <button (click)="myClickfunc($event)"> Click me</button>
+ 
+
+ <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+ <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCdQcX0BFLDv2ARFOBaaPrUBICd71YmTJk",
+    authDomain: "learnapi-1529329492559.firebaseapp.com",
+    databaseURL: "https://learnapi-1529329492559.firebaseio.com",
+    projectId: "learnapi-1529329492559",
+    storageBucket: "",
+    messagingSenderId: "530526131912"
+  };
+  firebase.initializeApp(config);
+ </script>
+   </body>
+   </html>
